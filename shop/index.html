@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - website</title>
+    <meta name="description" content="Shop plans and support the website. Choose from premium memberships, donations, and exclusive features.">
     <meta name="theme-color" content="#04040A">
 <link rel="canonical" href="https://websiteqwe.xo.je/shop.php">
 <meta property="og:type" content="website">
@@ -18,500 +19,158 @@
     <link rel="icon" href="https://spencer-assets.pages.dev/assets/images/favicon.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            min-height: 100vh;
-            line-height: 1.6;
-        }
-
-        .shop-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-
-        .shop-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .shop-header h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-
-        .shop-header p {
-            color: #9ca3af;
-            font-size: 1.1rem;
-        }
-
-        .shop-nav {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        .shop-nav a {
-            color: #9ca3af;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: all 0.2s;
-            font-size: 0.9rem;
-        }
-
-        .shop-nav a:hover {
-            color: #e0e0e0;
-            background: rgba(255,255,255,0.05);
-        }
-
-        /* Product Cards */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .product-card {
-            background: #111111;
-            border: 1px solid #222;
-            border-radius: 16px;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-card:hover {
-            border-color: #3b82f6;
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
-        }
-
-        .product-card.featured {
-            border-color: #8b5cf6;
-        }
-
-        .product-card.featured::before {
-            content: 'BEST VALUE';
-            position: absolute;
-            top: 12px;
-            right: -30px;
-            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
-            color: white;
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 4px 40px;
-            transform: rotate(45deg);
-            letter-spacing: 0.5px;
-        }
-
-        .product-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #f0f0f0;
-        }
-
-        .product-price {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 0.25rem;
-        }
-
-        .product-price .currency { font-size: 1.2rem; vertical-align: top; color: #9ca3af; }
-        .product-price .period { font-size: 0.9rem; color: #6b7280; font-weight: 400; }
-
-        .product-desc {
-            color: #9ca3af;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .product-features {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-
-        .product-features li {
-            padding: 0.3rem 0;
-            font-size: 0.9rem;
-            color: #d1d5db;
-        }
-
-        .product-features li::before {
-            content: '\2713';
-            color: #10b981;
-            font-weight: 700;
-            margin-right: 0.5rem;
-        }
-
-        .btn-purchase {
-            display: block;
-            width: 100%;
-            padding: 0.85rem;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-align: center;
-        }
-
-        .btn-purchase.primary {
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            color: white;
-        }
-
-        .btn-purchase.primary:hover {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
-        }
-
-        .btn-purchase.featured {
-            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
-            color: white;
-        }
-
-        .btn-purchase.featured:hover {
-            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
-        }
-
-        .btn-purchase:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        /* Donation Section */
-        .donation-section {
-            background: #111111;
-            border: 1px solid #222;
-            border-radius: 16px;
-            padding: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .donation-section h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #f0f0f0;
-        }
-
-        .donation-section p {
-            color: #9ca3af;
-            margin-bottom: 1.5rem;
-        }
-
-        .donation-form {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 1rem;
-            align-items: start;
-        }
-
-        @media (max-width: 640px) {
-            .donation-form {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .donation-amount-group {
-            position: relative;
-        }
-
-        .donation-amount-group .currency-prefix {
-            position: absolute;
-            left: 14px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #9ca3af;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .donation-amount-input {
-            width: 100%;
-            padding: 0.85rem 0.85rem 0.85rem 2rem;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 10px;
-            color: #e0e0e0;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .donation-amount-input:focus {
-            outline: none;
-            border-color: #3b82f6;
-        }
-
-        .donation-feedback-textarea {
-            width: 100%;
-            padding: 0.85rem;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 10px;
-            color: #e0e0e0;
-            font-size: 0.9rem;
-            resize: vertical;
-            min-height: 80px;
-            max-height: 160px;
-            font-family: inherit;
-        }
-
-        .donation-feedback-textarea:focus {
-            outline: none;
-            border-color: #3b82f6;
-        }
-
-        .char-counter {
-            text-align: right;
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin-top: 0.25rem;
-        }
-
-        .char-counter.warn { color: #f59e0b; }
-        .char-counter.over { color: #ef4444; }
-
-        /* Payment Form */
-        .payment-modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.85);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-        }
-
-        .payment-modal.active { display: flex; }
-
-        .payment-modal-content {
-            background: #111;
-            border: 1px solid #333;
-            border-radius: 16px;
-            padding: 2rem;
-            max-width: 480px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-
-        .payment-modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .payment-modal-header h2 {
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        .payment-modal-close {
-            background: none;
-            border: none;
-            color: #9ca3af;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .payment-summary {
-            background: #1a1a1a;
-            border-radius: 10px;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .payment-summary .summary-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.3rem 0;
-            font-size: 0.95rem;
-        }
-
-        .payment-summary .summary-total {
-            border-top: 1px solid #333;
-            margin-top: 0.5rem;
-            padding-top: 0.5rem;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        #stripe-element {
-            padding: 1rem;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-
-        .btn-pay {
-            width: 100%;
-            padding: 1rem;
-            border: none;
-            border-radius: 10px;
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            color: white;
-            font-size: 1.05rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .btn-pay:hover { box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4); }
-        .btn-pay:disabled { opacity: 0.5; cursor: not-allowed; }
-
-        .payment-error {
-            color: #ef4444;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-            min-height: 1.2em;
-        }
-
-        .payment-processing {
-            text-align: center;
-            padding: 2rem;
-            color: #9ca3af;
-        }
-
-        .payment-processing i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            display: block;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Account Creation */
-        .account-section {
-            background: #111;
-            border: 1px solid #10b981;
-            border-radius: 16px;
-            padding: 2rem;
-            max-width: 500px;
-            margin: 2rem auto;
-        }
-
-        .account-section h2 {
-            color: #10b981;
-            margin-bottom: 1rem;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 0.35rem;
-            color: #d1d5db;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 8px;
-            color: #e0e0e0;
-            font-size: 0.95rem;
-            font-family: inherit;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: #10b981;
-        }
-
-        .form-group .hint {
-            font-size: 0.8rem;
-            color: #6b7280;
-            margin-top: 0.25rem;
-        }
-
-        .btn-create-account {
-            width: 100%;
-            padding: 0.85rem;
-            border: none;
-            border-radius: 10px;
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .btn-create-account:hover {
-            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
-        }
-
-        .btn-create-account:disabled { opacity: 0.5; cursor: not-allowed; }
-
-        .account-error {
-            color: #ef4444;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            min-height: 1.2em;
-        }
-
-        .secure-badge {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            justify-content: center;
-            color: #6b7280;
-            font-size: 0.8rem;
-            margin-top: 1.5rem;
-        }
-
-        .secure-badge i { color: #10b981; }
-
-        /* Success banner */
-        .success-banner {
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .shop-header h1 { font-size: 1.8rem; }
-            .products-grid { grid-template-columns: 1fr; }
-            .product-price { font-size: 1.8rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="https://spencer-assets.pages.dev/css/shared.css?v=9.0">
+    <link rel="stylesheet" href="https://spencer-assets.pages.dev/css/shop.css?v=9.0">
 </head>
-<body>
+<body data-csrf-token="0c6670802534fbc62016d9359c75e8f7311515540228ec4273377fd6efd4d3d8" data-stripe-key="" data-is-logged-in="0" data-user-id="">
+    <style>
+.identity-bar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 16px;
+    background: rgba(10, 10, 18, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(78, 205, 196, 0.2);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    flex-wrap: wrap;
+}
+.identity-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #e2e8f0;
+    font-weight: 700;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.identity-bar-logo {
+    font-size: 20px;
+    line-height: 1;
+}
+.identity-bar-version {
+    font-size: 11px;
+    color: #4ecdc4;
+    font-weight: 600;
+    background: rgba(78, 205, 196, 0.12);
+    padding: 2px 7px;
+    border-radius: 6px;
+}
+.identity-bar-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+}
+.identity-bar-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 15px;
+    color: #fff;
+    background: linear-gradient(135deg, #94a3b8, #4ECDC4);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    flex-shrink: 0;
+}
+.identity-bar-user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    min-width: 0;
+}
+.identity-bar-display-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e2e8f0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 160px;
+}
+.identity-bar-role-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.identity-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.identity-bar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+.identity-bar-btn-home {
+    background: rgba(78, 205, 196, 0.15);
+    color: #4ecdc4;
+}
+.identity-bar-btn-home:hover { background: rgba(78, 205, 196, 0.25); transform: translateY(-1px); }
+.identity-bar-btn-settings {
+    background: rgba(102, 126, 234, 0.15);
+    color: #93a4f0;
+}
+.identity-bar-btn-settings:hover { background: rgba(102, 126, 234, 0.25); transform: translateY(-1px); }
+.identity-bar-btn-logout {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+}
+.identity-bar-btn-logout:hover { background: rgba(239, 68, 68, 0.25); transform: translateY(-1px); }
+.identity-bar-btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+@media (max-width: 640px) {
+    .identity-bar { padding: 6px 10px; gap: 8px; }
+    .identity-bar-center { display: none; }
+    .identity-bar-display-name { max-width: 100px; }
+    .identity-bar-btn { padding: 5px 8px; font-size: 12px; }
+    .identity-bar-version { display: none; }
+}
+</style>
+<nav class="identity-bar" role="navigation" aria-label="User identity bar">
+    <a href="main/" class="identity-bar-left">
+        <span class="identity-bar-logo">🌟</span>
+        <span>website</span>
+        <span class="identity-bar-version">v9.0</span>
+    </a>
+    <div class="identity-bar-center">
+        <div class="identity-bar-avatar">G</div>
+        <div class="identity-bar-user-info">
+            <span class="identity-bar-display-name">User</span>
+            <span class="identity-bar-role-badge">👤 Guest</span>
+        </div>
+    </div>
+    <div class="identity-bar-right">
+        <a href="main/" class="identity-bar-btn identity-bar-btn-home" title="Home">🏠 Home</a>
+        <a href="set/" class="identity-bar-btn identity-bar-btn-settings" title="Settings" aria-label="Settings">⚙️</a>
+        <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=0c6670802534fbc62016d9359c75e8f7311515540228ec4273377fd6efd4d3d8'}).finally(()=>location.href='/index.php')}" title="Logout">🚪</button>
+    </div>
+</nav>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
 
 <div class="shop-container" id="mainContent">
