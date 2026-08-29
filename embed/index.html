@@ -7,9 +7,9 @@
     <meta name="description" content="Copy-paste iframe snippets for every embeddable game on website.">
     <link rel="icon" href="https://spencer-assets-net.netlify.app/assets/images/favicon.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/styles.css?v=9.1">
-    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/shared.css?v=9.1">
-    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/game-page.css?v=9.1">
+    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/styles.css?v=9.3">
+    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/shared.css?v=9.3">
+    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/game-page.css?v=9.3">
     <style>
         .embed-grid {
             display: grid;
@@ -67,6 +67,9 @@
 </head>
 <body>
     
+<link rel="icon" type="image/x-icon" href="https://spencer-assets-net.netlify.app/assets/images/favicon.webp">
+<script>(function(){ if (!document.documentElement.dataset.theme) document.documentElement.dataset.theme = "dark"; })();</script>
+
 
 <style>
 .identity-bar {
@@ -200,8 +203,8 @@
 <nav class="identity-bar" role="navigation" aria-label="User identity bar">
     <a href="main/" class="identity-bar-left">
         <span class="identity-bar-logo">🌟</span>
-        <span>website</span>
-        <span class="identity-bar-version">v9.1</span>
+                <span class="site-logo-text">website</span>
+                <span class="identity-bar-version">v9.3</span>
     </a>
     <div class="identity-bar-center">
         <div class="identity-bar-avatar">G</div>
@@ -213,7 +216,7 @@
     <div class="identity-bar-right">
                 <a href="main/" class="identity-bar-btn identity-bar-btn-home" title="Home">🏠 Home</a>
         <a href="set/" class="identity-bar-btn identity-bar-btn-settings" title="Settings" aria-label="Settings">⚙️</a>
-        <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=101c3c04d72b15725dbbd963ec73e4c125fd39dd126cf709180f24dd14b59ebf'}).finally(()=>location.href='/index.php')}" title="Logout">🚪</button>
+        <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=5505ce2654e32f8bc57d6820c47bf70c4ec46dec5393d62efdbdf670fab12fc9'}).finally(()=>location.href='/index.php')}" title="Logout">🚪</button>
     </div>
 </nav>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
