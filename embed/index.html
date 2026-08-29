@@ -5,11 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embed Games - website</title>
     <meta name="description" content="Copy-paste iframe snippets for every embeddable game on website.">
+    <meta name="theme-color" content="#04040A">
+<link rel="canonical" href="https://websiteqwe.xo.je/embed.php">
+<link rel="icon" type="image/x-icon" href="https://spencer-assets-net.netlify.app/assets/images/favicon.webp">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Embed Games - website">
+<meta property="og:description" content="Copy-paste iframe snippets for every embeddable game on website.">
+<meta property="og:url" content="https://websiteqwe.xo.je/embed.php">
+<meta property="og:site_name" content="website">
+<meta property="og:image" content="https://spencer-assets-net.netlify.app/assets/images/og-banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Embed Games - website">
+<meta name="twitter:description" content="Copy-paste iframe snippets for every embeddable game on website.">
+<style>
+.site-hero { background-size: cover; background-position: center; min-height: 200px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; border-radius: 12px; margin: 1rem 0; position: relative; }
+.site-hero-title { font-size: 2rem; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5); margin: 0 0 0.5rem; }
+.site-hero-subtitle { font-size: 1.1rem; opacity: 0.9; text-shadow: 0 1px 2px rgba(0,0,0,0.5); margin: 0; }
+.site-footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 1.5rem 1rem; margin-top: 2rem; text-align: center; color: #94a3b8; }
+.site-footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.site-footer-name { font-weight: 700; color: #e2e8f0; }
+.site-footer-social { display: flex; gap: 1rem; }
+.site-footer-social-link { color: #94a3b8; font-size: 1.2rem; transition: color 0.2s; }
+.site-footer-social-link:hover { color: #4ECDC4; }
+.site-footer-contact a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
+.site-footer-contact a:hover { color: #4ECDC4; }
+</style>
     <link rel="icon" href="https://spencer-assets-net.netlify.app/assets/images/favicon.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/styles.css?v=9.3">
-    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/shared.css?v=9.3">
-    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/game-page.css?v=9.3">
+    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/styles.css?v=9.4">
+    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/shared.css?v=9.4">
+    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/game-page.css?v=9.4">
     <style>
         .embed-grid {
             display: grid;
@@ -67,7 +92,6 @@
 </head>
 <body>
     
-<link rel="icon" type="image/x-icon" href="https://spencer-assets-net.netlify.app/assets/images/favicon.webp">
 <script>(function(){ if (!document.documentElement.dataset.theme) document.documentElement.dataset.theme = "dark"; })();</script>
 
 
@@ -204,7 +228,7 @@
     <a href="main/" class="identity-bar-left">
         <span class="identity-bar-logo">🌟</span>
                 <span class="site-logo-text">website</span>
-                <span class="identity-bar-version">v9.3</span>
+                <span class="identity-bar-version">v9.4</span>
     </a>
     <div class="identity-bar-center">
         <div class="identity-bar-avatar">G</div>
@@ -216,7 +240,7 @@
     <div class="identity-bar-right">
                 <a href="main/" class="identity-bar-btn identity-bar-btn-home" title="Home">🏠 Home</a>
         <a href="set/" class="identity-bar-btn identity-bar-btn-settings" title="Settings" aria-label="Settings">⚙️</a>
-        <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=40c6567d3c3c371d8f310460f778cfa9665f2104b9d9d238d9ea548b5a3724a8'}).finally(()=>location.href='/index.php')}" title="Logout">🚪</button>
+        <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=9f5263031201bfa49895be6d151275ead0f751e31bf7148c9c2d5c6abd78f3c2'}).finally(()=>location.href='/index.php')}" title="Logout">🚪</button>
     </div>
 </nav>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
@@ -2183,5 +2207,13 @@
         });
     })();
     </script>
+
+    <footer class="site-footer">
+    <div class="site-footer-inner">
+        <div class="site-footer-brand">
+            <span class="site-footer-name">website</span>
+                    </div>
+                    </div>
+</footer>
 </body>
 </html>
