@@ -7,7 +7,8 @@
     <meta name="description" content="Privacy policy for website. Learn how we handle your data, cookies, and personal information.">
     <meta name="theme-color" content="#04040A">
 <link rel="canonical" href="https://websiteqwe.xo.je/privacy.php">
-<link rel="icon" type="image/x-icon" href="https://spencer-assets-net.netlify.app/assets/images/favicon.webp">
+<script>(function(){ if (!document.documentElement.dataset.theme) document.documentElement.dataset.theme = "dark"; })();</script>
+<link rel="icon" type="image/webp" href="https://spencer-assets-net.netlify.app/assets/images/favicon.webp">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Privacy Policy - website">
 <meta property="og:description" content="Read the Privacy Policy for website. Learn how we collect, use, store, and protect your personal information.">
@@ -18,6 +19,12 @@
 <meta name="twitter:title" content="Privacy Policy - website">
 <meta name="twitter:description" content="Read the Privacy Policy for website. Learn how we collect, use, store, and protect your personal information.">
 <style>
+:root {
+    --teal: #4ECDC4;
+    --teal-rgb: 78, 205, 196;
+    --ib-user-color: #94a3b8;
+    --ib-user-rgb: 148, 163, 184;
+}
 .site-hero { background-size: cover; background-position: center; min-height: 200px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; border-radius: 12px; margin: 1rem 0; position: relative; }
 .site-hero-title { font-size: 2rem; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5); margin: 0 0 0.5rem; }
 .site-hero-subtitle { font-size: 1.1rem; opacity: 0.9; text-shadow: 0 1px 2px rgba(0,0,0,0.5); margin: 0; }
@@ -29,6 +36,202 @@
 .site-footer-social-link:hover { color: #4ECDC4; }
 .site-footer-contact a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
 .site-footer-contact a:hover { color: #4ECDC4; }
+.identity-bar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 16px;
+    background: rgba(10, 10, 18, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(var(--teal-rgb), 0.2);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    flex-wrap: wrap;
+}
+.identity-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #e2e8f0;
+    font-weight: 700;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.identity-bar-logo {
+    font-size: 20px;
+    line-height: 1;
+}
+.identity-bar-version {
+    font-size: 11px;
+    color: var(--teal);
+    font-weight: 600;
+    background: rgba(var(--teal-rgb), 0.12);
+    padding: 2px 7px;
+    border-radius: 6px;
+}
+.identity-bar-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+}
+.identity-bar-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 15px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--ib-user-color), var(--teal));
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    flex-shrink: 0;
+}
+.identity-bar-user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    min-width: 0;
+}
+.identity-bar-display-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e2e8f0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 160px;
+}
+.identity-bar-role-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ib-user-color);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.identity-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.identity-bar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+.identity-bar-btn-home {
+    background: rgba(var(--teal-rgb), 0.15);
+    color: var(--teal);
+}
+.identity-bar-btn-home:hover { background: rgba(var(--teal-rgb), 0.25); transform: translateY(-1px); }
+.identity-bar-btn-settings {
+    background: rgba(102, 126, 234, 0.15);
+    color: #93a4f0;
+}
+.identity-bar-btn-settings:hover { background: rgba(102, 126, 234, 0.25); transform: translateY(-1px); }
+.identity-bar-btn-logout {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+}
+.identity-bar-btn-logout:hover { background: rgba(239, 68, 68, 0.25); transform: translateY(-1px); }
+.identity-bar-btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+@media (max-width: 640px) {
+    .identity-bar { padding: 6px 10px; gap: 8px; }
+    .identity-bar-center { display: none; }
+    .identity-bar-display-name { max-width: 100px; }
+    .identity-bar-btn { padding: 5px 8px; font-size: 12px; }
+    .identity-bar-version { display: none; }
+}
+.broadcast-alerts-container {
+    width: 100%;
+    z-index: 1000;
+}
+.broadcast-alert {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.92));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.broadcast-alert-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.broadcast-alert-icon {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    color: var(--bc-color, #3b82f6);
+}
+.broadcast-alert-body {
+    flex: 1;
+    min-width: 0;
+}
+.broadcast-alert-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 2px;
+}
+.broadcast-alert-message {
+    font-size: 0.82rem;
+    line-height: 1.35;
+    color: #cbd5e1;
+}
+.broadcast-alert-close {
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #94a3b8;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.broadcast-alert-close:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+.broadcast-alert-warning { border-left: 4px solid var(--bc-color, #f59e0b); }
+.broadcast-alert-urgent { border-left: 4px solid var(--bc-color, #ef4444); }
+.broadcast-alert-info { border-left: 4px solid var(--bc-color, #3b82f6); }
+@media (max-width: 640px) {
+    .broadcast-alert-inner {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .broadcast-alert-close {
+        margin-left: auto;
+    }
+}
 </style>
     <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/styles.css">
     <link rel="icon" href="https://spencer-assets-net.netlify.app/assets/images/favicon.webp">
