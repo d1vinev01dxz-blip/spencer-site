@@ -3,27 +3,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - website</title>
-    <meta name="description" content="Shop plans and support the website. Choose from premium memberships, donations, and exclusive features.">
+    <title>Membership - website</title>
+    <meta name="description" content="website membership — $2 lifetime. Unlock custom backgrounds, AI assistant, chat tags, profile customization, and more.">
     <meta name="theme-color" content="#04040A">
 <link rel="canonical" href="https://websiteqwe.xo.je/shop.php">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Shop - website">
-<meta property="og:description" content="Browse website shop: purchase premium accounts, donation packages, and supporter perks to enhance your experience.">
+<meta property="og:title" content="Membership - website">
+<meta property="og:description" content="website membership — $2 lifetime. Unlock custom backgrounds, AI assistant, chat tags, profile customization, and more.">
 <meta property="og:url" content="https://websiteqwe.xo.je/shop.php">
 <meta property="og:site_name" content="website">
 <meta property="og:image" content="https://spencer-assets-net.netlify.app/assets/images/og-banner.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Shop - website">
-<meta name="twitter:description" content="Browse website shop: purchase premium accounts, donation packages, and supporter perks to enhance your experience.">
+<meta name="twitter:title" content="Membership - website">
+<meta name="twitter:description" content="website membership — $2 lifetime. Unlock custom backgrounds, AI assistant, chat tags, profile customization, and more.">
     <link rel="icon" href="https://spencer-assets-net.netlify.app/assets/images/favicon.webp">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/shared.css?v=9.0">
-    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/shop.css?v=9.0">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/shared.css?v=9.1">
+    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/shop.css?v=9.1">
 </head>
-<body data-csrf-token="b824e71acdfc31b456418b87448b662840637e2989593c44a2edd702c4c55536" data-stripe-key="" data-is-logged-in="0" data-user-id="">
-    <style>
+<body data-csrf-token="7404f3d76a2a9b318c568359f6df192edbe916c6cecb64addcc5b543211898b9" data-is-logged-in="0">
+    
+
+<style>
 .identity-bar {
     position: sticky;
     top: 0;
@@ -156,7 +159,7 @@
     <a href="main/" class="identity-bar-left">
         <span class="identity-bar-logo">🌟</span>
         <span>website</span>
-        <span class="identity-bar-version">v9.0</span>
+        <span class="identity-bar-version">v9.1</span>
     </a>
     <div class="identity-bar-center">
         <div class="identity-bar-avatar">G</div>
@@ -168,7 +171,7 @@
     <div class="identity-bar-right">
                 <a href="main/" class="identity-bar-btn identity-bar-btn-home" title="Home">🏠 Home</a>
         <a href="set/" class="identity-bar-btn identity-bar-btn-settings" title="Settings" aria-label="Settings">⚙️</a>
-        <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=b824e71acdfc31b456418b87448b662840637e2989593c44a2edd702c4c55536'}).finally(()=>location.href='/index.php')}" title="Logout">🚪</button>
+        <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=7404f3d76a2a9b318c568359f6df192edbe916c6cecb64addcc5b543211898b9'}).finally(()=>location.href='/index.php')}" title="Logout">🚪</button>
     </div>
 </nav>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
@@ -178,101 +181,75 @@
         <a href="index/"><i class="fas fa-arrow-left"></i> Back to Login</a>
             </nav>
 
-            <!-- Shop Header -->
-        <div class="shop-header">
-            <h1>website</h1>
-            <p>Choose a plan to unlock the full experience</p>
-        </div>
-
-        <!-- Product Cards -->
-        <div class="products-grid">
-                        <div class="product-card ">
-                <div class="product-name">Membership</div>
-                <div class="product-price">
-                    <span class="currency">$</span>2.00<span class="period"></span>
-                </div>
-                <p class="product-desc">Pay Spencer $2 locally (cash or digital) to become a member. Your account is activated after payment.</p>
-                <ul class="product-features">
-                                            <li>Custom backgrounds</li>
-                                            <li>AI assistant access</li>
-                                            <li>Yaps chat with tags</li>
-                                            <li>Accent color customization</li>
-                                            <li>Server-synced settings</li>
-                                            <li>Full game library access</li>
-                                    </ul>
-                <button class="btn-purchase primary"
-                        onclick="payLocally()">
-                    Choose Membership                </button>
-            </div>
-                    </div>
-
-        <!-- Donation Section -->
-        <div class="donation-section">
-            <h2><i class="fas fa-heart" style="color:#ef4444"></i> Support the website</h2>
-            <p>Love what we're building? Leave a tip and an optional message. Every dollar helps keep the servers running.</p>
-
-            <div class="donation-form">
-                <div>
-                    <div class="donation-amount-group">
-                        <span class="currency-prefix">$</span>
-                        <input type="number" class="donation-amount-input" id="donationAmount"
-                               min="1" max="100" step="0.01" value="5" placeholder="5.00" aria-label="Donation amount">
-                    </div>
-                </div>
-                <div>
-                    <textarea class="donation-feedback-textarea" id="donationFeedback"
-                              maxlength="500" placeholder="Say thanks, share an idea, or just leave a note (optional)"></textarea>
-                    <div class="char-counter" id="donationCharCounter">0 / 500</div>
-                </div>
-            </div>
-            <br>
-            <button class="btn-purchase primary" onclick="selectDonation()" style="max-width:300px">
-                <i class="fas fa-heart"></i> Donate
-            </button>
-        </div>
-
+    <!-- Header -->
+    <div class="shop-header">
+        <h1>website Membership</h1>
+        <p>Unlock the full experience for $2 — lifetime</p>
     </div>
 
-<!-- Payment Modal -->
-<div class="payment-modal" id="paymentModal">
-    <div class="payment-modal-content">
-        <div class="payment-modal-header">
-            <h2 id="paymentTitle">Complete Payment</h2>
-            <button class="payment-modal-close" onclick="closePaymentModal()">&times;</button>
-        </div>
-
-        <div class="payment-summary">
-            <div class="summary-item">
-                <span id="summaryProduct">Product</span>
-                <span id="summaryPrice">$0.00</span>
+    
+    <!-- Membership Card -->
+    <div class="products-grid">
+        <div class="product-card featured" style="grid-column:1/-1;max-width:500px;margin:0 auto;">
+            <div class="product-name">Membership</div>
+            <div class="product-price">
+                <span class="currency">$</span>2<span class="period"></span>
             </div>
-            <div class="summary-item summary-total">
-                <span>Total</span>
-                <span id="summaryTotal">$0.00</span>
+            <p class="product-desc">One-time payment. Lifetime access. Pay in person.</p>
+            <ul class="product-features">
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Custom backgrounds</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Chat tags</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> AI assistant access</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Full site features</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Accent color customization</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Server-synced settings</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Profile customization (avatar, nickname, bio)</li>
+                            </ul>
+            <div style="padding:1rem;background:rgba(78,205,196,0.1);border-radius:8px;margin-top:1rem;text-align:center;">
+                <p style="margin:0;color:#94a3b8;font-size:0.9rem;">
+                    <i class="fas fa-info-circle"></i>
+                    Membership is $2 (lifetime). Ask in person to get set up with your own account.
+                </p>
             </div>
         </div>
+    </div>
 
-        <div id="stripeFormContainer">
-            <div id="stripe-element"></div>
-            <button class="btn-pay" id="btnPay" onclick="submitPayment()">
-                <i class="fas fa-lock"></i> Pay Now
-            </button>
-            <div class="payment-error" id="paymentError"></div>
+    <!-- Free vs Member Comparison -->
+    <div style="max-width:600px;margin:2rem auto;">
+        <h2 style="text-align:center;margin-bottom:1.5rem;">What You Get</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div style="padding:1.5rem;background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid rgba(255,255,255,0.08);">
+                <h3 style="color:#10b981;margin-bottom:1rem;font-size:1.1rem;">
+                    <i class="fas fa-users"></i> Free (Community)
+                </h3>
+                <ul style="list-style:none;padding:0;margin:0;font-size:0.9rem;color:#94a3b8;line-height:2;">
+                                            <li><i class="fas fa-circle" style="font-size:0.4rem;vertical-align:middle;margin-right:0.5rem;"></i> Basic site access</li>
+                                            <li><i class="fas fa-circle" style="font-size:0.4rem;vertical-align:middle;margin-right:0.5rem;"></i> Community features</li>
+                                            <li><i class="fas fa-circle" style="font-size:0.4rem;vertical-align:middle;margin-right:0.5rem;"></i> Yaps chat</li>
+                                    </ul>
+            </div>
+            <div style="padding:1.5rem;background:rgba(59,130,246,0.08);border-radius:12px;border:1px solid rgba(59,130,246,0.2);">
+                <h3 style="color:#3b82f6;margin-bottom:1rem;font-size:1.1rem;">
+                    <i class="fas fa-star"></i> Member ($2)
+                </h3>
+                <ul style="list-style:none;padding:0;margin:0;font-size:0.9rem;color:#cbd5e1;line-height:2;">
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Custom backgrounds</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Chat tags</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> AI assistant access</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Full site features</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Accent color customization</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Server-synced settings</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;"></i> Profile customization (avatar, nickname, bio)</li>
+                                    </ul>
+            </div>
         </div>
+    </div>
 
-        <div class="payment-processing" id="paymentProcessing" style="display:none">
-            <i class="fas fa-spinner"></i>
-            <p>Processing your payment...</p>
-        </div>
-
-        <div class="secure-badge">
-            <i class="fas fa-shield-alt"></i>
-            Membership is $2 — pay the website locally. Your account gets activated after payment.
-        </div>
+    <div class="secure-badge" style="margin:2rem auto;max-width:500px;">
+        <i class="fas fa-shield-alt"></i>
+        No online payment needed. Pay $2 in person and get your account set up instantly.
     </div>
 </div>
-
-
 
 </body>
 </html>

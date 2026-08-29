@@ -7,9 +7,9 @@
     <meta name="description" content="Copy-paste iframe snippets for every embeddable game on website.">
     <link rel="icon" href="https://spencer-assets-net.netlify.app/assets/images/favicon.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/styles.css?v=9.0">
-    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/shared.css?v=9.0">
-    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/game-page.css?v=9.0">
+    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/styles.css?v=9.1">
+    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/shared.css?v=9.1">
+    <link rel="stylesheet" href="https://spencer-assets-net.netlify.app/css/game-page.css?v=9.1">
     <style>
         .embed-grid {
             display: grid;
@@ -66,7 +66,9 @@
     </style>
 </head>
 <body>
-    <style>
+    
+
+<style>
 .identity-bar {
     position: sticky;
     top: 0;
@@ -199,7 +201,7 @@
     <a href="main/" class="identity-bar-left">
         <span class="identity-bar-logo">🌟</span>
         <span>website</span>
-        <span class="identity-bar-version">v9.0</span>
+        <span class="identity-bar-version">v9.1</span>
     </a>
     <div class="identity-bar-center">
         <div class="identity-bar-avatar">G</div>
@@ -211,7 +213,7 @@
     <div class="identity-bar-right">
                 <a href="main/" class="identity-bar-btn identity-bar-btn-home" title="Home">🏠 Home</a>
         <a href="set/" class="identity-bar-btn identity-bar-btn-settings" title="Settings" aria-label="Settings">⚙️</a>
-        <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=f025f71556193bf9c0c736e409b12ad7e8210976cba5ea277e558e0169330071'}).finally(()=>location.href='/index.php')}" title="Logout">🚪</button>
+        <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=101c3c04d72b15725dbbd963ec73e4c125fd39dd126cf709180f24dd14b59ebf'}).finally(()=>location.href='/index.php')}" title="Logout">🚪</button>
     </div>
 </nav>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
