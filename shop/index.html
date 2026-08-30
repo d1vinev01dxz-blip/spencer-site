@@ -49,7 +49,7 @@
     justify-content: space-between;
     gap: 12px;
     padding: 8px 16px;
-    background: #0b0f17;
+    background: var(--bg-card, #0b0f17);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(148, 163, 184, 0.14);
@@ -252,7 +252,7 @@
     <link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/css/shared.css?v=6.5">
     <link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/css/shop.css?v=6.5">
 </head>
-<body data-csrf-token="d4ad21d958386b161af8e03c6c63f2b8e6a5b0dc9c83e4ad6d94204dad500be7" data-is-logged-in="0">
+<body data-csrf-token="e0407bc3d0adcf265c0850b79b6dfe36f3030df804f78b5817197d1c67146dbb" data-is-logged-in="0">
     
 <nav class="identity-bar" role="navigation" aria-label="User identity bar">
     <a href="main/" class="identity-bar-left">
@@ -278,12 +278,12 @@
         <a href="set/" class="identity-bar-btn identity-bar-btn-settings" title="Settings" aria-label="Settings">
             <i class="fa-solid fa-gear" aria-hidden="true"></i>
         </a>
-                <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=d4ad21d958386b161af8e03c6c63f2b8e6a5b0dc9c83e4ad6d94204dad500be7'}).finally(()=>location.href='/index.php')}" title="Logout">
+                <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=e0407bc3d0adcf265c0850b79b6dfe36f3030df804f78b5817197d1c67146dbb'}).finally(()=>location.href='/index.php')}" title="Logout">
             <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
         </button>
     </div>
 </nav>
-<input type="hidden" id="globalCsrfToken" value="d4ad21d958386b161af8e03c6c63f2b8e6a5b0dc9c83e4ad6d94204dad500be7">
+<input type="hidden" id="globalCsrfToken" value="e0407bc3d0adcf265c0850b79b6dfe36f3030df804f78b5817197d1c67146dbb">
 
     <a class="skip-link" href="#mainContent">Skip to main content</a>
 
