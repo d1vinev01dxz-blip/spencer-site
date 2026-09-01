@@ -250,9 +250,10 @@
     <link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/assets/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/assets/font-awesome/css/all.min.css"></noscript>
     <link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/css/shared.css?v=6.5">
+    <link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/css/settings.css?v=6.5">
     <link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/css/shop.css?v=6.5">
 </head>
-<body data-csrf-token="08ca348ca264bb100fea172d5185946132b2a5b895e1b7ef51e1dcbf0bab0e98" data-is-logged-in="0" data-user-id="0">
+<body data-csrf-token="ab6161907d19a2763680439123620f5166a035c9c8c98a56f211a748d7de8d7b" data-is-logged-in="0" data-user-id="0">
     
 <nav class="identity-bar" role="navigation" aria-label="User identity bar"
      data-ib-position="top"
@@ -285,14 +286,16 @@
         <a href="set/" class="identity-bar-btn identity-bar-btn-settings" title="Settings" aria-label="Settings">
             <i class="fa-solid fa-gear" aria-hidden="true"></i>
         </a>
-                <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=08ca348ca264bb100fea172d5185946132b2a5b895e1b7ef51e1dcbf0bab0e98'}).finally(()=>location.href='/index.php')}" title="Logout">
+                        <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=ab6161907d19a2763680439123620f5166a035c9c8c98a56f211a748d7de8d7b'}).finally(()=>location.href='/index.php')}" title="Logout">
             <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
         </button>
     </div>
 </nav>
-<input type="hidden" id="globalCsrfToken" value="08ca348ca264bb100fea172d5185946132b2a5b895e1b7ef51e1dcbf0bab0e98">
+<input type="hidden" id="globalCsrfToken" value="ab6161907d19a2763680439123620f5166a035c9c8c98a56f211a748d7de8d7b">
+
 
     <a class="skip-link" href="#mainContent">Skip to main content</a>
+    <div class="bg-theme-override" id="bgThemeOverride"></div>
 
 <main class="shop-container" id="mainContent">
     <nav class="shop-nav">
@@ -300,10 +303,10 @@
             </nav>
 
     <!-- Header -->
-    <div class="shop-header">
-        <h1>website Membership</h1>
+    <header class="page-header">
+        <h1><i class="fas fa-crown" aria-hidden="true"></i> website Membership</h1>
         <p>Unlock the full experience for $2 — lifetime</p>
-    </div>
+    </header>
 
     
     <!-- Membership Card -->
@@ -378,6 +381,7 @@
                     </div>
                     </div>
 </footer>
+<script src="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/js/main.js?v=6.5" defer></script>
 <script src="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/js/shop.js?v=6.5" defer></script>
 </body>
 </html>
