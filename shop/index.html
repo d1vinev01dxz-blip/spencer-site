@@ -252,7 +252,7 @@
     <link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/css/shared.css?v=6.5">
     <link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/css/shop.css?v=6.5">
 </head>
-<body data-csrf-token="1da25f172e6d9bc852482b4b01bddd067cfb96de40f460416004890a10148392" data-is-logged-in="0">
+<body data-csrf-token="92194f98f284cc7868bf95d24556a6ef949dcd6f2c7debb8d5d62cab1965f13f" data-is-logged-in="0" data-user-id="0">
     
 <nav class="identity-bar" role="navigation" aria-label="User identity bar">
     <a href="main/" class="identity-bar-left">
@@ -278,12 +278,12 @@
         <a href="set/" class="identity-bar-btn identity-bar-btn-settings" title="Settings" aria-label="Settings">
             <i class="fa-solid fa-gear" aria-hidden="true"></i>
         </a>
-                <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=1da25f172e6d9bc852482b4b01bddd067cfb96de40f460416004890a10148392'}).finally(()=>location.href='/index.php')}" title="Logout">
+                <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=92194f98f284cc7868bf95d24556a6ef949dcd6f2c7debb8d5d62cab1965f13f'}).finally(()=>location.href='/index.php')}" title="Logout">
             <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
         </button>
     </div>
 </nav>
-<input type="hidden" id="globalCsrfToken" value="1da25f172e6d9bc852482b4b01bddd067cfb96de40f460416004890a10148392">
+<input type="hidden" id="globalCsrfToken" value="92194f98f284cc7868bf95d24556a6ef949dcd6f2c7debb8d5d62cab1965f13f">
 
     <a class="skip-link" href="#mainContent">Skip to main content</a>
 
@@ -316,10 +316,12 @@
                                     <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Server-synced settings</li>
                                     <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Profile customization (avatar, nickname, bio)</li>
                             </ul>
-            <div style="padding:1rem;background:rgba(78,205,196,0.1);border-radius:8px;margin-top:1rem;text-align:center;">
-                <p style="margin:0;color:#94a3b8;font-size:0.9rem;">
-                    <i class="fas fa-info-circle" aria-hidden="true"></i>
-                    Membership is $2 (lifetime). Ask the admin to get set up with your own account.
+            <div style="padding:1rem;margin-top:1rem;text-align:center;">
+                <button type="button" class="btn-shop-checkout" id="shopCheckoutBtn" style="background:linear-gradient(45deg,#FF6B6B,#4ECDC4);color:#04040A;border:none;padding:14px 36px;border-radius:10px;font-size:1.05rem;font-weight:800;cursor:pointer;box-shadow:0 4px 15px rgba(78,205,196,0.35);">
+                    <i class="fas fa-lock" aria-hidden="true"></i> Buy Now — $2 Lifetime
+                </button>
+                <p style="margin:0.75rem 0 0;color:#94a3b8;font-size:0.9rem;">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i> Secure online checkout (Stripe). One-time payment, lifetime access.
                 </p>
             </div>
         </div>
@@ -358,7 +360,7 @@
 
     <div class="secure-badge" style="margin:2rem auto;max-width:500px;">
         <i class="fas fa-shield-alt" aria-hidden="true"></i>
-        No online payment needed. Pay $2 and get your account set up instantly.
+        Pay $2 once — lifetime access, set up instantly after checkout.
     </div>
 </main>
 
@@ -369,5 +371,6 @@
                     </div>
                     </div>
 </footer>
+<script src="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/js/shop.js?v=6.5" defer></script>
 </body>
 </html>
