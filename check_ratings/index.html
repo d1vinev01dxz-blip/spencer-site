@@ -1,0 +1,18 @@
+Total ratings in DB: 0
+
+Top 30 games by votes:
+
+10 most recent ratings:
+
+Distinct rating values: 
+
+Table structure:
+CREATE TABLE `game_ratings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `slug` varchar(64) NOT NULL,
+  `rating` tinyint(4) NOT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_user_game` (`user_id`,`slug`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
