@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Setup Wizard — 7.0</title>
+    <style>
+        :root { --bg:#0f172a; --card:#1e293b; --border:#334155; --text:#f1f5f9; --muted:#94a3b8; --primary:#6366f1; --green:#10b981; --red:#ef4444; --yellow:#f59e0b; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; padding:2rem 1rem; }
+        .container { max-width:720px; margin:0 auto; }
+        .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:2rem; margin-bottom:1.5rem; }
+        h1 { font-size:1.5rem; margin-bottom:0.5rem; }
+        h2 { font-size:1.1rem; margin-bottom:1rem; color:var(--muted); }
+        .step { padding:1rem; border-radius:8px; margin-bottom:1rem; }
+        .step-ok { background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); }
+        .step-fail { background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3); }
+        .step-info { background:rgba(99,102,241,0.1); border:1px solid rgba(99,102,241,0.3); }
+        label { display:block; font-weight:600; margin-bottom:0.25rem; font-size:0.9rem; }
+        input[type="text"], input[type="password"] { width:100%; padding:0.75rem; border-radius:8px; border:1px solid var(--border); background:var(--bg); color:var(--text); font-size:1rem; margin-bottom:1rem; }
+        button { padding:0.75rem 1.5rem; border-radius:8px; border:none; background:var(--primary); color:white; font-size:1rem; font-weight:600; cursor:pointer; }
+        button:hover { opacity:0.9; }
+        .error { color:var(--red); font-size:0.9rem; margin-bottom:1rem; }
+        .muted { color:var(--muted); font-size:0.85rem; }
+        .result-list { list-style:none; font-size:0.8rem; max-height:200px; overflow-y:auto; }
+        .result-list li { padding:0.25rem 0; border-bottom:1px solid rgba(255,255,255,0.04); }
+        .badge { display:inline-block; padding:2px 8px; border-radius:4px; font-size:0.7rem; font-weight:700; }
+        .badge-ok { background:rgba(16,185,129,0.2); color:var(--green); }
+        .badge-fail { background:rgba(239,68,68,0.2); color:var(--red); }
+        .badge-exists { background:rgba(148,163,184,0.2); color:var(--muted); }
+        .badge-created { background:rgba(99,102,241,0.2); color:var(--primary); }
+        .generated-pass { background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.3); border-radius:8px; padding:1rem; margin:1rem 0; }
+        .generated-pass code { font-family:monospace; font-size:1.1rem; color:var(--yellow); word-break:break-all; }
+        a { color:var(--primary); }
+        .token-box { background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:1rem; margin:1rem 0; font-family:monospace; font-size:0.9rem; word-break:break-all; color:var(--yellow); }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <h1>Setup Wizard</h1>
+        <h2>Self-bootstrapping installer for the website codebase</h2>
+
+        
+                    <div class="step step-info">
+                <p>This wizard will:</p>
+                <ul style="margin:0.5rem 0 0 1.5rem;">
+                    <li>Verify database connectivity</li>
+                    <li>Create all 59 database tables</li>
+                    <li>Create required directories (uploads/, cache/, etc.)</li>
+                    <li>Seed default site settings</li>
+                    <li>Create the initial admin account</li>
+                </ul>
+            </div>
+
+            
+            <h2 style="margin-top:1.5rem;">Pre-flight Checks</h2>
+                            <div class="step step-ok">
+                    ✅ .env file exists                                    </div>
+                            <div class="step step-ok">
+                    ✅ config/database.php exists                                    </div>
+                            <div class="step step-ok">
+                    ✅ includes/schema.php exists                                    </div>
+                            <div class="step step-ok">
+                    ✅ data/game_registry.json exists                                    </div>
+                            <div class="step step-ok">
+                    ✅ Database connection                                    </div>
+            
+                            <form method="POST" style="margin-top:1.5rem;">
+                    <input type="hidden" name="step" value="run">
+                                            <p class="muted">No ADMIN_SETUP_PASSWORD set in .env. Use the one-time token below:</p>
+                        <div class="token-box">90480e29e6685a71d669763b5ba51957</div>
+                        <input type="hidden" name="token" value="90480e29e6685a71d669763b5ba51957">
+                    
+                    <label for="admin_username">Admin Username</label>
+                    <input type="text" id="admin_username" name="admin_username" value="admin" pattern="[a-zA-Z0-9_-]{3,30}" required>
+
+                    <label for="admin_password">Admin Password (leave blank to auto-generate)</label>
+                    <input type="password" id="admin_password" name="admin_password" minlength="8" placeholder="Auto-generate if blank">
+
+                    <button type="submit">Run Setup →</button>
+                </form>
+            
+            </div>
+</div>
+</body>
+</html>
