@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - website</title>
+    <meta name="description" content="website membership — $2 lifetime. Unlock custom backgrounds, AI assistant, chat tags, profile customization, and more.">
+    <meta name="theme-color" content="#04040A">
+<link rel="canonical" href="https://websiteqwe.xo.je/shop.php">
+<meta http-equiv="Content-Security-Policy" content="default-src &#039;self&#039;; script-src &#039;self&#039; &#039;unsafe-inline&#039; &#039;unsafe-eval&#039; blob: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://challenges.cloudflare.com https://js.stripe.com https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev; worker-src blob: &#039;self&#039;; style-src &#039;self&#039; &#039;unsafe-inline&#039; https://cdnjs.cloudflare.com https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev; img-src &#039;self&#039; data: blob: https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev; font-src &#039;self&#039; https://cdnjs.cloudflare.com data: https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev; connect-src &#039;self&#039; blob: https://challenges.cloudflare.com; frame-src &#039;self&#039; https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev https://websiteqwe.xo.je https://js-dos.com https://play.snowrider3d.games https://solarsmashonline.com https://archive.org https://minix.games https://playspark.net https://challenges.cloudflare.com https://js.stripe.com; base-uri &#039;self&#039;; form-action &#039;self&#039;;">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+<link rel="preconnect" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev" crossorigin>
+<link rel="preload" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/css/styles.css?v=7.0" as="style" fetchpriority="high">
+<script>(function(){ if (!document.documentElement.dataset.theme) document.documentElement.dataset.theme = "dark"; try { var p = localStorage.getItem("themePreset"); if (p && !document.documentElement.dataset.themePreset) document.documentElement.dataset.themePreset = p; } catch (e) {} })();</script>
+<link rel="icon" type="image/webp" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/assets/images/favicon.webp">
+<link rel="manifest" href="/manifest.webmanifest">
+<script>(function(){ if ('serviceWorker' in navigator) { try { if (location.pathname.indexOf('/auth/') === -1 && location.pathname.indexOf('/admin') === -1) { navigator.serviceWorker.register('/sw.js'); } } catch (e) {} } })();</script>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Membership - website">
+<meta property="og:description" content="website membership — $2 lifetime. Unlock custom backgrounds, AI assistant, chat tags, profile customization, and more.">
+<meta property="og:url" content="https://websiteqwe.xo.je/shop.php">
+<meta property="og:site_name" content="website">
+<meta property="og:image" content="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/assets/images/og-banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Membership - website">
+<meta name="twitter:description" content="website membership — $2 lifetime. Unlock custom backgrounds, AI assistant, chat tags, profile customization, and more.">
+<style>
+:root {
+    --teal: #4ECDC4;
+    --teal-rgb: 78, 205, 196;
+    --ib-user-color: #94a3b8;
+    --ib-user-rgb: 148, 163, 184;
+}
+.site-hero { background-size: cover; background-position: center; min-height: 200px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; border-radius: 12px; margin: 1rem 0; position: relative; }
+.site-hero-title { font-size: 2rem; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5); margin: 0 0 0.5rem; }
+.site-hero-subtitle { font-size: 1.1rem; opacity: 0.9; text-shadow: 0 1px 2px rgba(0,0,0,0.5); margin: 0; }
+.site-footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 1.5rem 1rem; margin-top: 2rem; text-align: center; color: #94a3b8; }
+.site-footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.site-footer-name { font-weight: 700; color: #e2e8f0; }
+.site-footer-social { display: flex; gap: 1rem; }
+.site-footer-social-link { color: #94a3b8; font-size: 1.2rem; transition: color 0.2s; }
+.site-footer-social-link:hover { color: #4ECDC4; }
+.site-footer-contact a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
+.site-footer-contact a:hover { color: #4ECDC4; }
+.identity-bar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 16px;
+    background: var(--bg-card, #0b0f17);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    flex-wrap: wrap;
+}
+.identity-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #e2e8f0;
+    font-weight: 700;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.identity-bar-logo {
+    font-size: 18px;
+    line-height: 1;
+    color: var(--teal);
+}
+.identity-bar-version {
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 600;
+    background: rgba(148, 163, 184, 0.12);
+    padding: 2px 7px;
+    border-radius: 6px;
+}
+.identity-bar-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+}
+.identity-bar-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    background: var(--ib-user-color);
+    flex-shrink: 0;
+}
+.identity-bar-user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    min-width: 0;
+}
+.identity-bar-display-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e2e8f0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 160px;
+}
+.identity-bar-role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ib-user-color);
+}
+.ib-role-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ib-user-color);
+    flex-shrink: 0;
+}
+.identity-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.identity-bar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    background: transparent;
+    color: #cbd5e1;
+}
+.identity-bar-btn:hover {
+    background: rgba(148, 163, 184, 0.12);
+    color: #fff;
+}
+.identity-bar .identity-bar-btn.active {
+    color: var(--teal);
+    background: rgba(var(--teal-rgb), 0.1);
+    box-shadow: inset 0 -2px 0 var(--teal);
+}
+.identity-bar-btn-home i {
+    color: var(--teal);
+}
+.identity-bar-btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+@media (max-width: 640px) {
+    .identity-bar { padding: 6px 10px; gap: 8px; }
+    .identity-bar-center { display: none; }
+    .identity-bar-display-name { max-width: 100px; }
+    .identity-bar-btn { padding: 6px 8px; font-size: 12px; }
+    .identity-bar-version { display: none; }
+    .ib-btn-label { display: none; }
+}
+.broadcast-alerts-container {
+    width: 100%;
+    z-index: 1000;
+}
+.broadcast-alert {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.92));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.broadcast-alert-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.broadcast-alert-icon {
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    color: var(--bc-color, #3b82f6);
+}
+.broadcast-alert-body {
+    flex: 1;
+    min-width: 0;
+}
+.broadcast-alert-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 2px;
+}
+.broadcast-alert-message {
+    font-size: 0.82rem;
+    line-height: 1.35;
+    color: #cbd5e1;
+}
+.broadcast-alert-close {
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #94a3b8;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.broadcast-alert-close:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+.broadcast-alert-warning { border-left: 4px solid var(--bc-color, #f59e0b); }
+.broadcast-alert-urgent { border-left: 4px solid var(--bc-color, #ef4444); }
+.broadcast-alert-info { border-left: 4px solid var(--bc-color, #3b82f6); }
+@media (max-width: 640px) {
+    .broadcast-alert-inner {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .broadcast-alert-close {
+        margin-left: auto;
+    }
+}
+</style>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/assets/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/assets/font-awesome/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/css/shared.css?v=7.0"><link rel="stylesheet" href="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/css/shop.css?v=7.0">
+</head>
+<body data-csrf-token="ba8228320cc50dd71fb724fe72f27fa3ab6fa01a697c08b7c5a5c3784d0f6a62" data-is-logged-in="0" data-user-id="0">
+    
+<nav class="identity-bar" role="navigation" aria-label="User identity bar"
+     data-ib-position="top"
+     data-ib-compact="false"
+     data-ib-hide-version="false"
+     data-ib-hide-role="false"
+     data-ib-hide-notif="false"
+     data-ib-icons-only="false"
+     >
+    <a href="main/" class="identity-bar-left">
+        <i class="fa-solid fa-gamepad identity-bar-logo" aria-hidden="true"></i>
+                <span class="site-logo-text">website</span>
+                <span class="identity-bar-version">v7.0</span>
+    </a>
+    <div class="identity-bar-center">
+        <div class="identity-bar-avatar">G</div>
+        <div class="identity-bar-user-info">
+            <span class="identity-bar-display-name">User</span>
+            <span class="identity-bar-role-badge">
+                <span class="ib-role-dot" aria-hidden="true"></span>
+                <span class="ib-role-label">GUEST</span>
+            </span>
+        </div>
+    </div>
+    <div class="identity-bar-right">
+                <a href="main/" class="identity-bar-btn identity-bar-btn-home" title="Home" aria-label="Home">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            <span class="ib-btn-label">Home</span>
+        </a>
+        <a href="settings/" class="identity-bar-btn identity-bar-btn-settings" title="Settings" aria-label="Settings">
+            <i class="fa-solid fa-gear" aria-hidden="true"></i>
+        </a>
+                        <button type="button" class="identity-bar-btn identity-bar-btn-logout" aria-label="Logout" onclick="if(confirm('Logout?')){fetch('/auth/logout.php',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'csrf_token=ba8228320cc50dd71fb724fe72f27fa3ab6fa01a697c08b7c5a5c3784d0f6a62'}).finally(()=>location.href='/index.php')}" title="Logout">
+            <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
+        </button>
+    </div>
+</nav>
+<input type="hidden" id="globalCsrfToken" value="ba8228320cc50dd71fb724fe72f27fa3ab6fa01a697c08b7c5a5c3784d0f6a62">
+
+
+    <a class="skip-link" href="#mainContent">Skip to main content</a>
+    <div class="bg-theme-override" id="bgThemeOverride"></div>
+
+<main class="shop-container" id="mainContent">
+    <nav class="shop-nav">
+        <a href="index/"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Login</a>
+            </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <h1><i class="fas fa-crown" aria-hidden="true"></i> website Membership</h1>
+        <p>Unlock the full experience for $2 — lifetime</p>
+    </header>
+
+    
+    <!-- Membership Card -->
+    <div class="products-grid">
+        <div class="product-card featured" style="grid-column:1/-1;max-width:500px;margin:0 auto;">
+            <div class="product-name">Membership</div>
+            <div class="product-price">
+                <span class="currency">$</span>2<span class="period"></span>
+            </div>
+            <p class="product-desc">One-time payment. Lifetime access.</p>
+            <ul class="product-features">
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Custom backgrounds</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Chat tags</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> AI assistant access</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Full site features</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Accent color customization</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Server-synced settings</li>
+                                    <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Profile customization (avatar, nickname, bio)</li>
+                            </ul>
+            <div style="padding:1rem;margin-top:1rem;text-align:center;">
+                <button type="button" class="btn-shop-checkout" id="shopCheckoutBtn" style="background:#1c2130;color:#4ECDC4;border:1px solid #2d3447;padding:10px 28px;border-radius:6px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:none;">
+                    <i class="fas fa-lock" aria-hidden="true"></i> Buy Now — $2 Lifetime
+                </button>
+                <p style="margin:0.75rem 0 0;color:#94a3b8;font-size:0.9rem;">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i> Secure online checkout (Stripe). One-time payment, lifetime access.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Free vs Member Comparison -->
+    <div style="max-width:600px;margin:2rem auto;">
+        <h2 style="text-align:center;margin-bottom:1.5rem;">What You Get</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div style="padding:1.5rem;background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid rgba(255,255,255,0.08);">
+                <h3 style="color:#10b981;margin-bottom:1rem;font-size:1.1rem;">
+                    <i class="fas fa-users" aria-hidden="true"></i> Free (Community)
+                </h3>
+                <ul style="list-style:none;padding:0;margin:0;font-size:0.9rem;color:#94a3b8;line-height:2;">
+                                            <li><i class="fas fa-circle" style="font-size:0.4rem;vertical-align:middle;margin-right:0.5rem;" aria-hidden="true"></i> Basic site access</li>
+                                            <li><i class="fas fa-circle" style="font-size:0.4rem;vertical-align:middle;margin-right:0.5rem;" aria-hidden="true"></i> Community features</li>
+                                            <li><i class="fas fa-circle" style="font-size:0.4rem;vertical-align:middle;margin-right:0.5rem;" aria-hidden="true"></i> Yaps chat</li>
+                                    </ul>
+            </div>
+            <div style="padding:1.5rem;background:rgba(59,130,246,0.08);border-radius:12px;border:1px solid rgba(59,130,246,0.2);">
+                <h3 style="color:#3b82f6;margin-bottom:1rem;font-size:1.1rem;">
+                    <i class="fas fa-star" aria-hidden="true"></i> Member ($2)
+                </h3>
+                <ul style="list-style:none;padding:0;margin:0;font-size:0.9rem;color:#cbd5e1;line-height:2;">
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Custom backgrounds</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Chat tags</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> AI assistant access</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Full site features</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Accent color customization</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Server-synced settings</li>
+                                            <li><i class="fas fa-check" style="color:#10b981;margin-right:0.5rem;" aria-hidden="true"></i> Profile customization (avatar, nickname, bio)</li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="secure-badge" style="margin:2rem auto;max-width:500px;">
+        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+        Pay $2 once — lifetime access, set up instantly after checkout.
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer-inner">
+        <div class="site-footer-brand">
+            <span class="site-footer-name">website</span>
+                    </div>
+                    </div>
+</footer>
+<script src="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/js/main.js?v=7.0" defer></script>
+<script src="https://pub-f1712ac651664dbd99bfa79c6e4e36ab.r2.dev/js/shop.js?v=7.0" defer></script>
+</body>
+</html>
